@@ -41,7 +41,7 @@ minimum_release_age_excludes = ["claude-code", "codex", "http:yc"]
 # and every install failed until then. Fetching the registry instead costs one
 # request per unresolved tool and keeps upstream fixes arriving on their own.
 aqua.baked_registry = false
-dotfiles.root = "~/dotfiles/home"
+dotfiles.root = "~/dev-tools/dotfiles/home"
 dotfiles.default_mode = "symlink"
 # For `mise daemons`: projects are moving their dev services off
 # process-compose onto [daemons], which is still experimental.
@@ -237,14 +237,14 @@ fingerprint = "3FEF9748469ADBE15DA7CA80AC2D62742012EA22"
 
 [dotfiles]
 #"~/.config/nvim" = "~/dotfiles/home/.config/nvim"
-"~/.gitconfig" = "~/dotfiles/home/.gitconfig"
-"~/.config/opencode/opencode.jsonc" = "~/dotfiles/home/.config/opencode/opencode.jsonc"
+"~/.gitconfig" = {}
+"~/.config/opencode/opencode.jsonc" = {}
 # The whole shell config, ordering included, is one tracked file. ~/.zshrc is
 # reduced to the single line that sources it — mise creates the file if it does
 # not exist, so nothing else has to put a .zshrc on a fresh machine. `mise
 # activate` lives in rc.zsh too, which is why there is no
 # [bootstrap.mise_shell_activate] block.
-"~/.config/zsh/rc.zsh" = "~/dotfiles/home/.config/zsh/rc.zsh"
+"~/.config/zsh/rc.zsh" = {}
 "~/.zshrc/rc" = { line = 'source ~/.config/zsh/rc.zsh' }
 # The four tools misecompsync's built-in registry does not cover. Not an XDG
 # path: the override is read through the dirs crate, which on macOS means

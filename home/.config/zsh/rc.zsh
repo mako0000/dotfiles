@@ -69,11 +69,11 @@ unset _tf
 bindkey -M viins '^[[91;5u' vi-cmd-mode
 bindkey -M vicmd '^[[91;5u' vi-cmd-mode
 
-source <(fzf --zsh)
+#source <(fzf --zsh)
 # zoxide binds `cd` itself rather than the default `z`: cd is what actually gets
 # typed here, so it is the one worth making frecency-aware.
-eval "$(zoxide init zsh --cmd cd)"
-eval "$(starship init zsh)"
+#eval "$(zoxide init zsh --cmd cd)"
+#eval "$(starship init zsh)"
 
 # Machine-local and untracked — tokens and anything else that must not reach a
 # public repo. See "What is still manual" in the README.
