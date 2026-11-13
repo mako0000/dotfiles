@@ -17,6 +17,11 @@ export PATH="$HOME/.local/bin:$PATH:$HOME/.local/share/mise/shims"
 
 eval "$(mise activate zsh)"
 
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git z)
+source $ZSH/oh-my-zsh.sh
+
 # Completions. Almost nothing here ships a completion file — each tool prints
 # one from a subcommand instead, and the flag differs per tool. misecompsync
 # knows those flags for 130-odd tools and writes the files; the mise hooks that
@@ -33,7 +38,7 @@ fpath=(
 
 # oh-my-zsh used to be the only thing calling compinit. Without this line a
 # fresh machine has no completion at all.
-autoload -Uz compinit && compinit
+#autoload -Uz compinit && compinit
 
 # terraform is the one tool with no completion file to generate — its
 # `-install-autocomplete` appends a bash-style `complete -C` line that hands
@@ -51,11 +56,11 @@ unset _tf
 # need nothing from the framework — no $ZSH, no plugins=(), no oh-my-zsh.sh.
 # The clone they come from is declared in [bootstrap.repos]. Sourced before
 # fzf so that fzf's ctrl-r wins over the vi-mode binding.
-for _plugin in git vi-mode eza; do
-  _file="$HOME/.oh-my-zsh/plugins/$_plugin/$_plugin.plugin.zsh"
-  [ -r "$_file" ] && source "$_file"
-done
-unset _plugin _file
+#for _plugin in git vi-mode eza; do
+#  _file="$HOME/.oh-my-zsh/plugins/$_plugin/$_plugin.plugin.zsh"
+#  [ -r "$_file" ] && source "$_file"
+#done
+#unset _plugin _file
 
 # Ghostty sends ctrl+[ as the CSI u sequence ESC [ 91;5u, not as a bare ESC
 # (ghostty-org/ghostty#2976). zsh does not know it: the leading ESC drops into

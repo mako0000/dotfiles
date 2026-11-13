@@ -244,8 +244,8 @@ fingerprint = "3FEF9748469ADBE15DA7CA80AC2D62742012EA22"
 # not exist, so nothing else has to put a .zshrc on a fresh machine. `mise
 # activate` lives in rc.zsh too, which is why there is no
 # [bootstrap.mise_shell_activate] block.
-#"~/.config/zsh/rc.zsh" = "~/dotfiles/home/.config/zsh/rc.zsh"
-#"~/.zshrc/rc" = { line = 'source ~/.config/zsh/rc.zsh' }
+"~/.config/zsh/rc.zsh" = "~/dotfiles/home/.config/zsh/rc.zsh"
+"~/.zshrc/rc" = { line = 'source ~/.config/zsh/rc.zsh' }
 # The four tools misecompsync's built-in registry does not cover. Not an XDG
 # path: the override is read through the dirs crate, which on macOS means
 # ~/Library/Application Support rather than the ~/.local/share the README names.
